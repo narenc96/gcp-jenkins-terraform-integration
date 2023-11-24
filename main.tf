@@ -1,7 +1,7 @@
 provider "google" {
   project     = "jenkins-gke-267"
   region      = "us-central1"
-  credentials_id = '73eb42fa-6eae-4eb1-8402-83948dd827f7'
+  credentials = "${file("jenkins-gke-267-7a34a7c0ac23.json")}"
 
 }
 
