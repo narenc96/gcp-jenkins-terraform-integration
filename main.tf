@@ -1,6 +1,6 @@
 provider "google" {
   project     = "jenkins-gke-267"
-  #credentials = file("jenkins-gke-267-7a34a7c0ac23.json")
+  credentials = file("jenkins-gke-267-7a34a7c0ac23.json")
   region      = "us-central1"
 
 }
