@@ -13,11 +13,8 @@ pipeline{
         }
         stage('Initialize'){
             steps{
-                withCredentials([file(credentialsId: 'sa-key', variable: 'SERVICE_ACCOUNT_KEY')]) {
 
                 sh 'gcloud auth application-default set-quota-project jenkins-gke-267'
-
-                sh 'gcloud auth activate-service-account --key-file=$SERVICE_ACCOUNT_KEY'
 
                 sh 'terraform init'
              
