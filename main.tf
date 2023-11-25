@@ -18,6 +18,15 @@ resource "google_compute_subnetwork" "my-custom-subnet1" {
 }
 
 
-
+module "gcs_buckets" {
+  source  = "terraform-google-modules/cloud-storage/google"
+  version = "~> 5.0"
+  project_id  = "jenkins-gke-267"
+  names = ["terraform", "cicd"]
+  prefix = "jenkins-bucket-prefix"
+  versioning = {
+    first = true
+  }
+}
 #### test file to push
 
