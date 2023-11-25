@@ -16,10 +16,7 @@ pipeline{
 
                 sh 'gcloud auth application-default set-quota-project jenkins-gke-267'
 
-                sh 'terraform init'
-             
-                    
-                }
+                sh 'terraform init'                
             
             }
         }
