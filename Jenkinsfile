@@ -13,7 +13,7 @@ pipeline{
         }
         stage('Initialize'){
             steps{
-                withCredentials([file(credentialsId: 'sa-key', variable: 'SERVICE_ACCOUNT_KEY')]) {
+                withCredentials([file(credentialsId: '73eb42fa-6eae-4eb1-8402-83948dd827f7', variable: 'SERVICE_ACCOUNT_KEY')]) {
 
                 sh 'gcloud auth activate-service-account --key-file=$SERVICE_ACCOUNT_KEY'
                 
