@@ -15,7 +15,7 @@ pipeline{
             steps{
                 withCredentials([file(credentialsId: 'sa-key', variable: 'SERVICE_ACCOUNT_KEY')]) {
 
-                sh 'gcloud auth activate-service-account --key-file=$SERVICE_ACCOUNT_KEY'
+                sh 'gcloud auth activate-service-account --key-file=$SERVICE_ACCOUNT_KEY.json'
                 
                 sh 'gcloud auth application-default set-quota-project jenkins-gke-267'
 
